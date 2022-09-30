@@ -11,7 +11,8 @@ describe('home page', () => {
     // is not good as they can change and tests can fail
 
     // we can use inspector to get element selector
-    cy.get('[data-test="hero-heading"]')
+    // cy.get('[data-test="hero-heading"]')
+    cy.getByData('hero-heading')
       .should('exist')
       .contains('Testing Next.js Applications with Cypress');
   });
